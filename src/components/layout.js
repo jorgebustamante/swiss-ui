@@ -7,26 +7,31 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
+import Hero from './hero'
+import Content from './content'
 
-import Header from "./header"
-import "./layout.css"
+// import "./layout.css"
+import './style.css'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
+    <Hero/>
+    <Content/>
+
+      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      {/* <div
         style={{
           margin: `0 auto`,
           maxWidth: 960,
@@ -40,7 +45,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </div> */}
     </>
   )
 }

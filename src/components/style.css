@@ -1,0 +1,120 @@
+.grid-parent {
+  display: grid;
+  grid-template-columns: [one-third] 1fr [two-third] 2fr;
+  grid-template-rows: 1fr;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.CLrow {
+  display: grid;
+  grid-template-columns: [one-third] 1fr [two-third] 2fr;
+}
+.CRrow {
+  display: grid;
+  grid-template-columns: [two-third] 2fr [one-third] 1fr;
+}
+/* @media only screen and (max-width: 500px) {
+    .CLrow {
+        display: grid;
+        grid-template-columns: [one-third] 1fr [two-third] 1fr;
+      }
+      .CRrow {
+        display: grid;
+        grid-template-columns: [two-third] 1fr [one-third] 1fr;
+      }
+  } */
+.one-third {
+  grid-column: one-third;
+  overflow: hidden;
+}
+.two-third {
+  grid-column: two-third;
+  overflow: hidden;
+}
+
+body {
+  background-color: #e61d2d;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.title {
+  font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
+  top: 20px;
+  margin: 0;
+  /* text-align: center; */
+  font-family: sans-serif;
+  color: #e61d2d;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+  z-index: 1;
+}
+.break {
+  display: inline-block;
+}
+.content-text {
+  font-size: calc(8px + (28 - 8) * ((100vw - 300px) / (1600 - 300)));
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+a{
+  text-decoration: none !important;
+
+}
+.link {
+  text-align: center;
+  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #1D428C;
+  margin: 20px;
+  
+}
+.strike{
+  text-decoration: line-through;
+}
+.geometric{
+  border: black solid 3px;
+  box-shadow: -8px 8px 0 -3px #f2c94c, -8px 8px 0 0px #000;
+}
+.overlay {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero-img {
+  width: 100%;
+  top: 0px;
+  z-index: -1;
+}
+
+.low-light-yellow {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, #f2c94c 40%);
+  padding-right: 15px;
+}
+.low-light-red {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, #f39099 40%);
+  padding-right: 15px;
+}
+.bg-yellow {
+  background-color: #f2c94c;
+}
+
+.no-margin {
+  margin: 0px;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}

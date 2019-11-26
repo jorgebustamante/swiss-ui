@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/swiss-ui",
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -11,6 +12,20 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/japan-folder`,
+        name: `japanFolder`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/america-folder`,
+        name: `americaFolder`,
       },
     },
     `gatsby-transformer-sharp`,
