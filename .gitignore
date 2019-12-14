@@ -59,6 +59,8 @@ typings/
 public
 src/america-folder/
 src/japan-folder/
+src/armerica-vertical
+src/japan-vertical
 
 # Mac files
 .DS_Store
