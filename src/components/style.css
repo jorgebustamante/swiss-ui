@@ -22,8 +22,10 @@
   overflow: hidden;
 }
 .equal-row{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-around;
+
+  /* grid-template-columns: repeat(2, 1fr); */
 }
 .CLrow {
   display: grid;
@@ -99,8 +101,7 @@ a {
   /* padding-top: 20px; */
   /* padding-bottom: 40px; */
 }
-.link-text {
-}
+
 .strike {
   text-decoration: line-through;
 }

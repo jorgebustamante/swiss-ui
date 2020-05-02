@@ -60,18 +60,19 @@ const Content = () => {
         </div>
       </section>
       <section className="equal-row bg-yellow">
+        {[
+          {name: "America", path: '/america-gallery'},
+          {name: "Japan", path: '/japan-gallery'},
+
+      ].map(({name, path}) => (
         <div className="link bg-yellow">
           {" "}
-          <AniLink className="geometric" paintDrip to="/america-gallery" hex="#6271D4">
-            <span className='link-text'>Go to American Gallery</span>
+          <AniLink className="geometric" paintDrip to={path} hex="#6271D4">
+            <span className='link-text'>Go to {name} Gallery</span>
           </AniLink>
         </div>
-        <div className="link bg-yellow">
-          {" "}
-          <AniLink className="geometric" paintDrip to="/japan-gallery" hex="#6271D4">
-            <span className='link-text'>Go to Japan Gallery</span>
-          </AniLink>
-        </div>
+      ))}
+     
       </section>
     </>
   )

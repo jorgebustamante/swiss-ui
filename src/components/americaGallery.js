@@ -7,11 +7,12 @@ const AmericaImages = () => {
   // Edit image optimization params in query
   // fluid(maxWidth: 300, quality: 100) {
   const { allFile } = useStaticQuery(graphql`
-    query horizontalAm {
+    query AmericaSheet {
       allFile(
         filter: {
           extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-          sourceInstanceName: { eq: "americaFolder" }
+          sourceInstanceName: { eq: "galleries" }
+          relativeDirectory: {eq: "america-folder"}
         }
       ) {
         edges {

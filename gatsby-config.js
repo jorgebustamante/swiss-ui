@@ -14,32 +14,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/japan-vertical`,
-        name: `japanVertical`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/japan-folder`,
-        name: `japanFolder`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/america-vertical`,
-        name: `americaVertical`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/america-folder`,
-        name: `americaFolder`,
+        path: `${__dirname}/src/galleries`,
+        name: `galleries`,
       },
     },
     `gatsby-transformer-sharp`,

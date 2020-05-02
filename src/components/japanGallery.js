@@ -7,12 +7,12 @@ const JapanImages = () => {
   // Edit image optimization params in query
   // fluid(maxWidth: 300, quality: 100) {
   const { allFile } = useStaticQuery(graphql`
-    query horizontalJa{
+    query JapanSheet{
        allFile(
         filter: {
           extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-          sourceInstanceName: { eq: "japanFolder" }
-        }
+          sourceInstanceName: { eq: "galleries" }
+          relativeDirectory: {eq: "japan-folder"}        }
       ) {
         edges {
           node {
