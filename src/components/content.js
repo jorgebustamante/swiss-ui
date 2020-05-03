@@ -63,6 +63,7 @@ const Content = () => {
         {[
           {name: "America", path: '/america-gallery'},
           {name: "Japan", path: '/japan-gallery'},
+          {name: "Infrared", path: '/infrared-gallery'}
 
       ].map(({name, path}) => (
         <div className="link bg-yellow">

@@ -39,7 +39,7 @@ const JapanImages = () => {
           
         ))}
       </section>
-      <section className="gallery-grid bg-yellow">
+      <section className="equal-row bg-yellow">
         <div className="link">
           {" "}
           <AniLink className="geometric" paintDrip to="/" hex="#6271D4">

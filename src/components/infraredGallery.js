@@ -3,17 +3,16 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "./style.css"
-const AmericaImages = () => {
+const InfraredImages = () => {
   // Edit image optimization params in query
   // fluid(maxWidth: 300, quality: 100) {
   const { allFile } = useStaticQuery(graphql`
-    query AmericaSheet {
-      allFile(
+    query InfraredSheet{
+       allFile(
         filter: {
           extension: { regex: "/(jpg)|(jpeg)|(png)/" }
           sourceInstanceName: { eq: "galleries" }
-          relativeDirectory: {eq: "america-folder"}
-        }
+          relativeDirectory: {eq: "infrared-folder"}        }
       ) {
         edges {
           node {
@@ -34,9 +33,10 @@ const AmericaImages = () => {
       <section className="gallery-grid">
         {allFile.edges.map((items, i) => (
           <div className="imgContainer">
-            <p className="contactText">KODACHROME {i + 1}</p>
-            <Img key={i} fluid={items.node.childImageSharp.fluid} />
-          </div>
+          <p className="contactText">AEROCHROME {i + 1}</p>
+          <Img key={i} fluid={items.node.childImageSharp.fluid} />
+        </div>
+          
         ))}
       </section>
       <section className="equal-row bg-yellow">
@@ -51,4 +51,4 @@ const AmericaImages = () => {
   )
 }
 
-export default AmericaImages
+export default InfraredImages
